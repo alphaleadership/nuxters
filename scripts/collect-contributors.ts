@@ -4,15 +4,34 @@ import { fileURLToPath } from 'node:url'
 import { Octokit } from 'octokit'
 import { paginateRest } from '@octokit/plugin-paginate-rest'
 import { retry } from '@octokit/plugin-retry'
+import dotenv from 'dotenv'
 
+dotenv.config()
 const REQUIRED_TOKEN_MESSAGE = 'NUXT_GITHUB_TOKEN is required to collect contributor statistics'
 const ORGS = [
-  'nuxt',
-  'nuxt-community',
-  'nuxt-content',
-  'nuxt-hub',
-  'nuxt-modules',
-  'nuxt-ui-templates',
+  "blue-keys",
+ "skunksworks",
+ "sandoz-anti-brouteur",
+ "jaeger-program",
+ "tool-protech",
+ "space-creation-shop",
+ "revelation-cia",
+ "rail-manager",
+ "acnihilator",
+ "france-nuit",
+ "listenbourg-game",
+ "listenbourg-legal",
+ "task-force-random",
+ "music-ocey",
+ "PremiumPC-fr",
+ "thomas-iniguez-visioli",
+ "ksa-testwiki",
+ "vbcq-volley",
+ "Wolf-Unit",
+ "coruance",
+ "hexo-pro",
+ "monteloria",
+ "rtmerdia",
 ] as const
 const HELPFUL_REACTIONS_THRESHOLD = 3
 const HELPFUL_COMMENTS_THRESHOLD = 5

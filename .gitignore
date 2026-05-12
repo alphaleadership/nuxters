@@ -11,3 +11,5 @@ dist
 .vscode
 .pnpm-store
 test-results
+temp.cjs
+env
